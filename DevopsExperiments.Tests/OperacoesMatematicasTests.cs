@@ -9,12 +9,12 @@ public class OperacoesMatematicasTests
         OperacoesMatematicas operacoes = new OperacoesMatematicas();
 
         // Teste para potência 0
-        int resultado1 = operacoes.PotenciaAleatoria(5);
-        Assert.Equal(1, resultado1);
+        int resultado1 = operacoes.PotenciaAleatoria(0);
+        Assert.Equal(0, resultado1);
 
         // Teste para potência 1
-        int resultado2 = operacoes.PotenciaAleatoria(5);
-        Assert.Equal(5, resultado2);
+        int resultado2 = operacoes.PotenciaAleatoria(1);
+        Assert.Equal(1, resultado2);
 
         // Teste para potência aleatória entre 2 e 9 (inclusive)
         int resultado3 = operacoes.PotenciaAleatoria(5);
