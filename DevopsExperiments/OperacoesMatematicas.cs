@@ -1,4 +1,8 @@
-﻿namespace DevopsExperiments
+﻿// <copyright file="OperacoesMatematicas.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace DevopsExperiments
 {
     using System;
 
@@ -7,7 +11,7 @@
     /// </summary>
     public class OperacoesMatematicas
     {
-        private readonly Random random = new Random();
+        private readonly Random random = new ();
 
         /// <summary>
         /// Calcula a potência de um número elevado a um número aleatório entre 0 e 9.
