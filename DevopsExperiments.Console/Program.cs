@@ -1,8 +1,12 @@
 ﻿using System;
+using DevopsExperiments;
 
-class Program
+/// <summary>
+/// Classe responsável por iniciar a aplicação.
+/// </summary>
+internal class Program
 {
-    static void Main()
+        private static void Main()
     {
         OperacoesMatematicas operacoes = new OperacoesMatematicas();
 

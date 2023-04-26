@@ -1,8 +1,19 @@
+// <copyright file="OperacoesMatematicasTests.cs" company="Delfino Devops">
+// Copyright (c) Delfino Devops. All rights reserved.
+// </copyright>
+
 using System;
+using DevopsExperiments;
 using Xunit;
 
+/// <summary>
+/// Classe de testes para a classe OperacoesMatematicas.
+/// </summary>
 public class OperacoesMatematicasTests
 {
+    /// <summary>
+    /// Testa o método PotenciaAleatoria da classe OperacoesMatematicas.
+    /// </summary>
     [Fact]
     public void TestePotenciaAleatoria()
     {

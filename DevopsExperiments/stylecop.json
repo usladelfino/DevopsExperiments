@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/schemas/StyleCop.schema.json",
+  "settings": {
+    "documentationRules": {
+      "companyName": "Delfino Devops",
+      "copyright": {
+        "text": "Copyright (c) 2023 Delfino Devops. All rights reserved.",
+        "includeInDocumentation": true,
+        "xmlHeader": true
+      }
+    },
+    "rules": {
+      "usingDirectivesOrdering": {
+        "order": "system,Microsoft,OtherSystem,Other",
+        "outsideNamespace": true
+      },
+      "usingDirectives": {
+        "sa1200": true,
+        "system": true
+      },
+      "namingRules": {
+        "methods": {
+          "requiredPrefix": "Do",
+          "requiredSuffix": "Async"
+        },
+        "publicFields": {
+          "requiredPrefix": "m_",
+          "prefixFieldWithUnderscore": true
+        }
+      }
+    }
+  }
+}
