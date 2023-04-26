@@ -1,13 +1,24 @@
-﻿using System;
-
-public class OperacoesMatematicas
+﻿namespace DevopsExperiments
 {
-    private readonly Random random = new Random();
+    using System;
 
-    public int PotenciaAleatoria(int numero)
+    /// <summary>
+    /// Classe que contém operações matemáticas.
+    /// </summary>
+    public class OperacoesMatematicas
     {
-        int outroNumero = random.Next(10); // Gera um número inteiro aleatório entre 0 e 9 (inclusive)
-        int resultado = (int)Math.Pow(numero, outroNumero); // Eleva o número passado como parâmetro à potência do outro número
-        return resultado;
+        private readonly Random random = new Random();
+
+        /// <summary>
+        /// Calcula a potência de um número elevado a um número aleatório entre 0 e 9.
+        /// </summary>
+        /// <param name="numero">O número que será elevado à potência.</param>
+        /// <returns>O resultado da potência.</returns>
+        public int PotenciaAleatoria(int numero)
+        {
+            int outroNumero = this.random.Next(10); // Gera um número inteiro aleatório entre 0 e 9 (inclusive)
+            int resultado = (int)Math.Pow(numero, outroNumero); // Eleva o número passado como parâmetro à potência do outro número
+            return resultado;
+        }
     }
 }
