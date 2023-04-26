@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DevopsExperiments\DevopsExperiments.csproj" />
+    <ProjectReference Include="..\DevopsExperiments.API\DevopsExperiments.API.csproj" />
   </ItemGroup>
 
 </Project>

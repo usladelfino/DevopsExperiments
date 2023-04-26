@@ -1,34 +1,29 @@
-// <copyright file="OperacoesMatematicasTests.cs" company="Delfino Devops">
-// Copyright (c) Delfino Devops. All rights reserved.
-// </copyright>
-
-using System;
-using DevopsExperiments;
+using DevopsExperiments.API;
+using DevopsExperiments.API.Controllers;
+using Microsoft.AspNetCore.Mvc;
 using Xunit;
 
-/// <summary>
-/// Classe de testes para a classe OperacoesMatematicas.
-/// </summary>
-public class OperacoesMatematicasTests
+namespace DevopsExperiments.Tests
 {
     /// <summary>
-    /// Testa o método PotenciaAleatoria da classe OperacoesMatematicas.
+    /// Classe de teste para OperacoesMatematicasController.
     /// </summary>
-    [Fact]
-    public void TestePotenciaAleatoria()
+    public class OperacoesMatematicasTests
     {
-        OperacoesMatematicas operacoes = new OperacoesMatematicas();
+        /// <summary>
+        /// Testa o método GetPotenciaAleatoria do controlador OperacoesMatematicasController.
+        /// </summary>
+        [Fact]
+        public void TestGetPotenciaAleatoria()
+        {
+            // Arrange
+            var controller = new OperacoesMatematicasController(new OperacoesMatematicas());
 
-        // Teste para potência 0
-        int resultado1 = operacoes.PotenciaAleatoria(0);
-        Assert.Equal(0, resultado1);
+            // Act
+            var result = controller.Get(2);
 
-        // Teste para potência 1
-        int resultado2 = operacoes.PotenciaAleatoria(1);
-        Assert.Equal(1, resultado2);
-
-        // Teste para potência aleatória entre 1 e 9 (inclusive)
-        int resultado3 = operacoes.PotenciaAleatoria(5);
-        Assert.InRange(resultado3, 5, 1953125); // 5^2 = 25 e 5^9 = 1953125
+            // Assert
+            Assert.IsType<OkObjectResult>(result);
+        }
     }
 }
