@@ -30,7 +30,7 @@ jobs:
           yaml_file: ./swagger.yml
           swagger_ui_version: 3.50.0
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
 
       - name: Deploy to Webdock
         uses: webdockio/webdock-action@v1
