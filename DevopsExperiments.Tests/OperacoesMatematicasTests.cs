@@ -20,7 +20,7 @@ namespace DevopsExperiments.Tests
             var controller = new OperacoesMatematicasController(new OperacoesMatematicas());
 
             // Act
-            var result = controller.Get(2);
+            var result = controller.Get(3);
 
             // Assert
             Assert.IsType<OkObjectResult>(result);
